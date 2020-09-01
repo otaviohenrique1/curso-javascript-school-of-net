@@ -1,0 +1,27 @@
+{
+  "name": "grunt_curso",
+  "version": "1.0.0",
+  "description": "Projeto feito no curso de grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "grunt",
+    "node"
+  ],
+  "author": "Otavio Henrique",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.2.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-shell": "^3.0.1",
+    "imagemin-mozjpeg": "^9.0.0"
+  }
+}

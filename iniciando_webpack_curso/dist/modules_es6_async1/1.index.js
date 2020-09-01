@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],[,function(a,e,n){"use strict";n.r(e),e.default=["cerveja","agua","suco","vinho","bebidas"]}]]);
