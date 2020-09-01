@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello world
+    <input type="text" id="search">
+    <button id="btn">Click to send extension</button>
+    <script>
+        const btn = document.getElementById('btn');
+        const search = document.getElementById('search');
+
+        btn.addEventListener('click', () => {
+            const event = new CustomEvent('ext', {
+                detail: {
+                    search: search.value
+                }
+            });
+            window.dispatchEvent(event);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "ng2-install-son",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Otavio",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "git-clone": "^0.1.0",
+    "install": "^0.13.0",
+    "npm": "^6.14.6",
+    "rimraf": "^3.0.2"
+  }
+}

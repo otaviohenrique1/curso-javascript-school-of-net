@@ -1,0 +1,25 @@
+{
+    "name": "Test Ext",
+    "description": "Extension test",
+    "version": "0.1",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://localhost:3000/"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "externally_connectable": {
+        "matches": []
+    },
+    "browser_action": {}
+}
