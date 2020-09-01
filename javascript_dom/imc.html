@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .error {
+                color: red;
+                padding: 1em 0;
+            }
+            .result {
+                color: green;
+                padding: 1em 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>IMC</h1>
+        <input type="text" name="height" placeholder="Height">
+        <input type="text" name="weight" placeholder="Weight">
+        <button type="button">Calcular</button>
+        <div id="result"></div>
+        <script>
+            const height = document.getElementById('height')
+            const weight = document.getElementById('weight')
+            const result = document.getElementById('result')
+            const btn = document.getElementById('btnCalc')
+            
+            function setStyle() {
+                weight.style.display = 'block'
+                weight.style.width = '90%'
+                weight.style.padding = '.4rem .75rem'
+                weight.style.fontSize = '1rem'
+                weight.style.color = '#494949'
+                weight.style.borderRadius = '.25rem'
+                weight.style.border = '1px solid #cecece'
+
+                height.style.display = 'block'
+                height.style.width = '90%'
+                height.style.padding = '.4rem .75rem'
+                height.style.fontSize = '1rem'
+                height.style.color = '#494949'
+                height.style.borderRadius = '.25rem'
+                height.style.border = '1px solid #cecece'
+
+                btnCalc.style.display = 'block'
+                btnCalc.style.fontWeight = '400'
+                btnCalc.style.border = '1px solid transparent'
+                btnCalc.style.padding = '.4rem .75rem'
+                btnCalc.style.fontSize = '1rem'
+                btnCalc.style.borderRadius = '.25rem'
+                btnCalc.style.background = '#0062cc'
+                btnCalc.style.color = '#ffffff'
+            }
+            
+            function calcImc() {
+                if (weight.value == '' && height.value == '')  {
+                    result.innerHTML = '<span class="error">Invalid inputs</span>'
+                }
+                // IMC = WEIGHT / (HEIGHT * HEIGHT)
+                const IMC = weight.value / (height.value * height.value)
+
+                if (IMC < 18) {
+                    result.innerHTML = `<p class="result">Resultado: ${IMC} = Abaixo do peso ideal</p>`
+                } else if (IMC > 18 && IMC < 25) {
+                    result.innerHTML = `<p class="result">Resultado: ${IMC} = Peso ideal</p>`
+                } else if (IMC > 25 && IMC < 30) {
+                    result.innerHTML = `<p class="result">Resultado: ${IMC} = Acima do peso</p>`
+                } else if(IMC > 30 && IMC < 40) {
+                    result.innerHTML = `<p class="result">Resultado: ${IMC} = Muito acima do peso</p>`                
+                } else if (IMC > 40) {
+                    result.innerHTML = `<p class="result">Resultado: ${IMC} = Obesidade</p>`
+                }
+            }
+            setStyle()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .canvas {
+                border: 1px solid #cccccc;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" class="canvas"></canvas>
+        <script>
+            const canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                console.log('Suported');
+                let ctx = canvas.getContext('2d');
+                // ctx.moveTo(0,0)
+                // ctx.lineTo(300, 100);
+                // ctx.arc(80, 30, 30, 0, 2 * Math.PI);
+                // ctx.rect(0, 0, 150, 150);
+                ctx.moveTo(75,0)
+                ctx.rect(0, 0, 250, 150);
+                // ctx.lineTo(75, 0);
+                // ctx.lineTo(150, 100);
+                // ctx.lineTo(0, 100);
+                ctx.strokeStyle = "#292929"
+                ctx.fillStyle = "#01c1d2";
+                ctx.lineWidth = 2
+                ctx.fill();
+                ctx.stroke();
+            } else {
+                console.warn('Not suported');
+            }
+        </script>
+    </body>
+</html>

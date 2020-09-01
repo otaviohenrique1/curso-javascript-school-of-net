@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="text" class="text">Hello world</p>
+        <input type="text" name="email">
+        <script>
+            // document.body
+            // const p = document.getElementsByTagName('p');
+            // console.log(p[0].textContent);
+            // const p = document.getElementById('text');
+            // console.log(p.textContent);
+            // const p = document.getElementsByClassName('text');
+            // console.log(p[0].textContent);
+            // const email = document.getElementsByName('email');
+            // console.log(email);
+            const email = document.getElementsByName('email');
+            console.log(email[0].nodeName);
+            let button = document.createElement('button');
+            let attr = document.createAttribute('class');
+            let text = document.createTextNode('Button Custom');
+            attr.value = 'customize class';
+            button.setAttributeNode(attr);
+            button.appendChild(text);
+            document.body.appendChild(button);
+            document.body.removeChild(document.getElementById('text'));
+        </script>
+    </body>
+</html>

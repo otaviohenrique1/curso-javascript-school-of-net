@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Exemplo de função assincrona
+            // setTimeout(function() {
+            //     console.log('Hello world');
+            // }, 2000);
+            // function cbFunc(string) {
+            //     Hello world
+            // }
+            // setTimeout(cbFunc, 2000, 'string 01');
+            // console.log('1');
+            // console.log('2');
+            // console.log('3');
+            function sayHello(cb) {
+                return cb('Hello world');
+            }
+            console.log('Console log');
+            sayHello(function(str) {
+                console.log(str);
+            });
+            console.log('Console log');
+        </script>
+    </body>
+</html>

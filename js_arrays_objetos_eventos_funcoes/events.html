@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button type="button" id="btn">Click here!</button>
+        <script>
+            let btn = document.getElementById('btn');
+            btn.addEventListener('click', alertMe);
+            function alertMe() {
+                alert('Hello World');
+            }
+            window.addEventListener('DOMContentLoaded' , function() {
+                console.log('Hello World');
+            });
+        </script>
+    </body>
+</html>

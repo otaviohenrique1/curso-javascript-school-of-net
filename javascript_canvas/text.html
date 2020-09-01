@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .canvas {
+                border: 1px solid #cccccc;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" class="canvas"></canvas>
+        <script>
+            const canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                console.log('Suported');
+                let ctx = canvas.getContext('2d');
+                ctx.font = '80px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.strokeStyle = '#44bcb6';
+                ctx.fillStyle = '#44bcb6';
+                ctx.strokeText('Canvas SON', 20, 70);
+                ctx.fillText('Canvas SON', 20, 70);
+            } else {
+                console.warn('Not suported');
+            }
+        </script>
+    </body>
+</html>

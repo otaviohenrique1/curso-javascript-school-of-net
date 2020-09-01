@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="btn" onclick="clickMe()">Click me</button>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('asdaasda');
+            });
+            document.body.onload = function() {
+                console.log('Onload function');
+                if (navigator.onLine) {
+                    alert('Online');
+                } else {
+                    alert('Offline');
+                }
+            }
+            const button = document.getElementById('btn');
+            function clickMe() {
+                alert('Helo custom function')
+            }
+            button.addEventListener('click', clickMe)
+        </script>
+    </body>
+</html>

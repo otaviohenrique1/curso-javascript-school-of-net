@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function funcName1(name) {
+                console.log(`Hello ${name}`);
+            }
+
+            let funcName2 = function(name) {
+                console.log(`Hello ${name}`);
+            }
+
+            const funcName3 = function(name) {
+                console.log('Hello ' + name);
+            }
+
+            const funcName4 = function(name = 'Erik') {
+                console.log('Hello ' + name);
+            }
+
+            function fatorial(numero) {
+                if (numero == 1) {
+                    return 1;
+                } else {
+                    return numero * fatorial(numero - 1);
+                }
+            }
+
+            funcName1('Leonan');
+            funcName2('Leonan');
+            funcName3('Leonan');
+            funcName4();
+            console.log(`Resultado fatorial de 3 -> ${fatorial(3)}`);
+            console.log(`Resultado fatorial de 5 -> ${fatorial(5)}`);
+            console.log(`Resultado fatorial de 10 -> ${fatorial(10)}`);
+        </script>
+    </body>
+</html>
