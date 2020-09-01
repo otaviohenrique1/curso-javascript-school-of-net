@@ -1,1 +1,1 @@
-# Atividades desenvolvidas nos cursos de javascript da Alura Cursos Online
+# Atividades desenvolvidas nos cursos de javascript da School of Net
